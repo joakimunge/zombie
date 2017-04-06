@@ -18,6 +18,7 @@ function restartGame() {
 
 	else {
 		alert("Thanks for playing this short ass game!");
+
 	}
 }
 
@@ -40,22 +41,51 @@ var crossRoads = prompt("You exit the door and find yourself at a crossroads. Wh
 
 if (crossRoads == "Right") {
 	alert("You start walking to your right. Suddenly the game just fucking ends");
-	restartGame()
+	restartGame();
 
-	} else if (crossRoads == "Left") {
+	} 
+	else if (crossRoads == "Left") {
 	alert("You start walking to your left. The world feels really empty. Almost like nobody bothered to continue shaping it.");
 	var answer = confirm("Do you want to turn back?");
-
-	if (answer === true) {
+		if (answer === true) {
 		postDoor();
-	}
+		}
+		else {
 
-	else {
 		alert("Whelp. Well, there you go.")
-		restartGame()
-	}
+		restartGame();
+		}
+} 
 
+else if (crossRoads == "Forward") {
+	alert("You have encountered a big blob!");
+	var choice = prompt("What do you want to do? \n(Attack, Run, Surrender)");
+	if (choice === "Attack") {
+		if (randomNumber === 1) {
+			alert("You have defeated the ogre with your" + " " + weapon + "!");
+			restartGame();
+		}
+		else {
+			alert("Unfortunately, your" + " " + weapon + " " + "was too weak to handle this big boy. It broke. You can probably figure out what happened next.");
+			restartGame();
+			}
+		}
 
+		else if (choice === "Run") {
+		alert("You ran away.");
+		postDoor()
+		}
+
+		else if (choice === "Surrender") {
+		alert("You surrender to the might of the blob. You are dead.");
+		restartGame();
+		}
+
+}
+
+else {
+	alert("Please enter a valid direction. \n(Right, Left, Forward)");
+	postDoor();
 }
 
 }
