@@ -27,8 +27,8 @@ if (randomNumber === 0) {
 	alert("The zombie bites you. You lose!");
 } else if (randomNumber === 1 && weapon === "hammer") {
 	alert("Zombie is smashed into a puddle of ass.");
-} else if (randomNumber === 1 && weapon === "dick") {
-	alert("You rape zombie");
+} else if (randomNumber === 1 && weapon === "knife") {
+	alert("You absolutely murder zombie");
 }else if (randomNumber === 1) {
 	alert("You kill the zombie with your" + " " + weapon + "!");
 }
